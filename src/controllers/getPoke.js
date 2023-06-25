@@ -64,7 +64,7 @@ return pokeDb
           const apiPokes = await pokeApi();
           const dbPokes = await dataBasePoke();
           
-          // Check if both apiPokes and dbPokes are defined
+          
           if (apiPokes && dbPokes) {
             const totalPokes = apiPokes.concat(dbPokes);
             return totalPokes;
@@ -73,11 +73,11 @@ return pokeDb
           } else if (dbPokes) {
             return dbPokes;
           } else {
-            return []; // Return an empty array if both apiPokes and dbPokes are undefined
+            return []; 
           }
         } catch (error) {
           console.log(error);
-          return []; // Return an empty array in case of any error
+          return []; 
         }
       };
       

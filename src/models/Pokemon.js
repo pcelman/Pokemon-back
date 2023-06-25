@@ -14,7 +14,7 @@ module.exports = (sequelize) => {
       allowNull: false,
       unique: true
     },
-    hp: {//vida
+    hp: {//vida, health power
       type: DataTypes.INTEGER
     },
     attack: {
