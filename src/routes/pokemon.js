@@ -45,6 +45,7 @@ router.post("/", async (req, res) => {
   const { name, hp, attack, defense, speed, height, weight, image, types } =
     req.body;
   try {
+    console.log("Received POST request:", req.body);
     const newPokemon = await Pokemon.create({
       name,
       hp,
@@ -56,7 +57,7 @@ router.post("/", async (req, res) => {
       image,
       createdInDb: true,
     });
-    // console.log(newPokemon)
+    console.log("New Pokemon created:", newPokemon);
 
     const typeDb = await Types.findAll({
       where: { name: types },
