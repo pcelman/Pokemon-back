@@ -12,7 +12,8 @@ const server = express();
 server.name = 'API';
 
 server.use(cors({
-  origin: 'http://127.0.0.1:5173',
+  // origin: 'http://127.0.0.1:5173',
+  origin: 'https://my-pokemon-delta.vercel.app',
 }));
 
 server.use(bodyParser.urlencoded({ extended: true, limit: '50mb' }));
